@@ -5,10 +5,10 @@ RUN yum install -y nodejs
 
 WORKDIR /app
 
-COPY package.json /app/src
+COPY package.json /app
 RUN npm install --only=prod
-COPY server /app/src/server
-COPY public /app/src/public
+COPY server /app/server
+COPY public /app/public
 
 ENV NODE_ENV production
 ENV PORT 3000
